@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/logo.svg";
@@ -16,10 +17,12 @@ const Navbar = () => {
         <Link to={"/employees"}>Employees</Link>
         <Link to={"/passwords"}>Passwords</Link>
       </ul>
-      <button className="navbar__button">Sing up</button>
-
+      <Link to={"/admin"}>
+        <button className="navbar__button">Sign up</button>
+      </Link>
     </nav>
   );
 };
 
 export default Navbar;
+

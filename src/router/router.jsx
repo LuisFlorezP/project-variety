@@ -8,6 +8,7 @@ import Passwords from "../pages/Passwords"
 import Movies from "../pages/Movies"
 import LayoutPublic from "../layout/LayoutPublic"
 import NotFound from "../pages/NotFound"
+import AdminDashboard from "../pages/AdminDashboard"
 
 
 export const router = createBrowserRouter([
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
                 path: "/movies",
                 element: <Movies/>
         
+            },
+            {
+                path: "admin",
+                element: <AdminDashboard/>
             }
 
         ]

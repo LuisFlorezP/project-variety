@@ -1,0 +1,105 @@
+.container__adminlogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 500px;
+  color: #787aa5;
+  background-color: #27283a2d;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.133);
+  margin-top: 40px;
+}
+
+.container__login-input {
+  position: relative;
+  height: 37px;
+  margin-bottom: 70px;
+}
+
+.container__login-input label {
+  position: absolute;
+  left: 7px;
+  bottom: 45px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.container__login-input input {
+  width: 403px;
+  height: 61px;
+  background-color: #21212b;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #aeaeae;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.container__login-input input:hover {
+  transition: ease-in-out 300ms;
+  box-shadow: 0px 0px 20px 0px #37374a;
+}
+
+.container__login-input input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.container__login-input .icon {
+  position: absolute;
+  font-size: 30px;
+  right: 10px;
+  bottom: -10px;
+  padding: 5px;
+  background-color: #3e3e54;
+  border-radius: 100%;
+}
+
+.container__login button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 157px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(180deg, #6d6d8a 0%, #37374a 100%);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.container__login button:hover {
+  transition: 0.3s ease-in-out;
+  background: radial-gradient(#6d6d8a3a 100%, #9797ad 10%);
+  cursor: pointer;
+}
+
+.container__login button .icon {
+  font-size: 35px;
+  color: #00be4c;
+  border-radius: 50%;
+  background: linear-gradient(#6d6d8a, #37374a);
+}
+
+.container__login p {
+    font-size: 16px;
+    font-weight: 600;
+    background-color: rgba(157, 82, 82, 0.473);
+    color: rgb(255, 2, 2);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
