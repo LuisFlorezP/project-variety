@@ -1,0 +1,47 @@
+.container__input {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+
+}
+
+.container__input input {
+  width: 403px;
+  height: 61px;
+  background-color: #21212b;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  color: #AEAEAE;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.container__input input::placeholder {
+    font-size: 18px;
+    color: #AEAEAE;
+
+}
+
+.container__input button {
+  width: 163px;
+  height: 61px;
+  background: linear-gradient(#6d6d8a, #37374a);
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.container__input button:hover {
+    
+    background: radial-gradient( #37374a, #6d6d8a)
+
+}
+
+.container__input button .icon__arrow {
+    font-size: 30px;
+    transform: rotate(100deg);
+    margin-top: 10px;
+}
