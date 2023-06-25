@@ -1,0 +1,76 @@
+.container__serviceone {
+  display: flex;
+  justify-content: center;
+  background-color: #343549;
+  margin-top: 200px;
+  padding: 0 200px;
+}
+
+.container__serviceone-inter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1440px;
+  height: 275px;
+}
+
+.container__serviceone-info span {
+  color: #999aab;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.96px;
+}
+
+.container__serviceone-info h4 {
+  color: #787aa5;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  width: 300px;
+  margin-top: 10px;
+
+
+}
+
+.container__serviceone-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 328px;
+  height: 131px;
+
+}
+
+.container__serviceone-card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  background: linear-gradient(180deg, #6d6d8a 0%, #37374a 100%);
+  box-shadow: 0px 1.8518518209457397px 3.1481480598449707px 0px
+      rgba(0, 0, 0, 0.06),
+    0px 8.148148536682129px 6.518518447875977px 0px rgba(0, 0, 0, 0.1),
+    0px 20px 13px 0px rgba(0, 0, 0, 0.13),
+    0px 38.51852035522461px 25.481481552124023px 0px rgba(0, 0, 0, 0.15),
+    0px 64.81481170654297px 46.85185241699219px 0px rgba(0, 0, 0, 0.19),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container__serviceone-card-info {
+  color: #787aa5;
+  margin-left: 24px;
+}
+
+.container__serviceone-card-info h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.container__serviceone-card-info p {
+  color: #5c5d75;
+  font-size: 16px;
+  line-height: 26px;
+}
