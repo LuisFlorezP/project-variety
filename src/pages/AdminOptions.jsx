@@ -2,7 +2,8 @@ import CardAdmin from "../components/AdminCard/CardAdmin";
 
 const AdminOptions = () => {
     return (
-        <section className="containes_admin-options">
+        <section className="containes_admin-dashboard">
+          <section className="containes_admin-options">
             <CardAdmin
               title={"Customers"}
               description={"Manage page of customers"}
@@ -28,6 +29,7 @@ const AdminOptions = () => {
               description={"Manage page of suppliers"}
               link={"/suppliersadmin"}
             />
+          </section>
         </section>
     );
 };
