@@ -32,11 +32,12 @@ const Movies = () => {
   const settings = {
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     autoplay: true,
     speed: 4000,
     autoplaySpeed: 100,
     cssEase: "linear",
+  
     
   };
 
