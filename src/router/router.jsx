@@ -14,6 +14,11 @@ import EmployeesAdmin from "../pages/Admin/EmployeesAdmin/EmployeesAdmin";
 import PasswordsAdmin from "../pages/Admin/PasswordsAdmin/PasswordsAdmin";
 import ProductsAdmin from "../pages/Admin/ProductsAdmin/ProductsAdmin";
 import SuppliersAdmin from "../pages/Admin/SuppliersAdmin/SuppliersAdmin";
+import FormsCustomersAdmin from "../pages/Admin/AdminForms/FormsCustomersAdmin";
+import FormsEmployeesAdmin from "../pages/Admin/AdminForms/FormsEmployeesAdmin";
+import FormsPasswordsAdmin from "../pages/Admin/AdminForms/FormsPasswordsAdmin";
+import FormsProductsAdmin from "../pages/Admin/AdminForms/FormsProductsAdmin";
+import FormsSuppliersAdmin from "../pages/Admin/AdminForms/FormsSuppliersAdmin";
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +79,32 @@ export const router = createBrowserRouter([
   {
     path: "/productsadmin",
     element: <ProductsAdmin/>
+  },
+  {
+    path: "/formcustomersadmin",
+    element: <FormsCustomersAdmin/>
   }
+  ,
+  {
+    path: "formemployeesadmin",
+    element: <FormsEmployeesAdmin/>  
+  }
+  ,
+  {
+    path: "formproductsadmin",
+    element: <FormsPasswordsAdmin/>
+  }
+  ,
+  {
+    path: "formproductsadmin",
+    element: <FormsProductsAdmin/>
+    
+  },
+  {
+    path: "formsuppliersadmin",
+    element: <FormsSuppliersAdmin/>
+    
+  }
+  
 
 ]);
