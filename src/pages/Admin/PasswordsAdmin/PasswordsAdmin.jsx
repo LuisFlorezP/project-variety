@@ -5,10 +5,10 @@ const PasswordsAdmin = () => {
         <>
             <section>
                 <button>Volver</button>
-                <button>Crear</button>
+                <Link to={""}>Crear</ Link>
             </section>
             <section>
-                <Link to={""} />
+                
             </section>
         </>
     );

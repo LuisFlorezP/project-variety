@@ -18,18 +18,18 @@ const AdminDashboard = () => {
   return (
     <>
       {isAdminLoggedIn ? (
-            <div>
+          <section>
             <CardAdmin
               title={"Customers"}
-              description={"Administrar pagina de los customers"}
+              description={"Manage page of customers"}
               link={""}
             />
               <CardAdmin
-              title={"product"}
-              description={"Administrar pagina de los products"}
+              title={"Product"}
+              description={"Manage page of products"}
               link={""}
             />
-          </div>
+          </section>
       ) : (
         <AdminLogin handleLogin={handleLogin} />
       )}
