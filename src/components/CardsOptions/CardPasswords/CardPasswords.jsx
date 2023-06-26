@@ -2,15 +2,15 @@ import './Card.css';
 
 const CardPasswords = ({ id, nombre, barrio, ciudad, correo, direccion, documento, telefono, valor, imagen }) => {
   return (
-    <div className="card">
-      <div className="card-header">
+    <section className="card">
+      <section className="card-header">
         <h3>{nombre}</h3>
-      </div>
-      <div className="card-body">
-        <div className="card-image">
+      </section>
+      <section className="card-body">
+        <section className="card-image">
           <img src={imagen} alt={nombre} />
-        </div>
-        <div className="card-info">
+        </section>
+        <section className="card-info">
           <p>ID: {id}</p>
           <p>Barrio: {barrio}</p>
           <p>Ciudad: {ciudad}</p>
@@ -19,9 +19,9 @@ const CardPasswords = ({ id, nombre, barrio, ciudad, correo, direccion, document
           <p>Documento: {documento}</p>
           <p>Teléfono: {telefono}</p>
           <p>Valor: {valor}</p>
-        </div>
-      </div>
-    </div>
+        </section>
+      </section>
+    </section>
   );
 };
 
