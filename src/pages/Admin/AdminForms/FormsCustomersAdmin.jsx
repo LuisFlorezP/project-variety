@@ -20,7 +20,7 @@ const FormsCustomersAdmin = () => {
                     <input type="text" id="ciudad" required placeholder="Enter the city of residence..." /><br />
                     <label for="barrio">Neighborhood:</label>
                     <input type="text" id="barrio" required placeholder="Enter the neighborhood of residence..." /><br />
-                    <label for="imagen">Image:</label>
+                    <label for="imagen">Customer image:</label>
                     <input type="file" id="imagen" required/><br />
                     <input type="submit" value="Submit" />
                 </form>
