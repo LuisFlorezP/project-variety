@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { database } from "../../../components/config/database.jsx";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
+import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 
 const CustomersAdmin = () => {
 
@@ -22,10 +23,7 @@ const CustomersAdmin = () => {
 
     return (
         <>
-            <section>
-                <Link to={"/adminoptions"}>Volver</ Link>
-                <Link to={"/formcustomersadmin"}>Crear</ Link>
-            </section>
+            <NavbarAdmin form={"/formcustomersadmin"} />
             <section>
                 {
                     customers.map((customer) => (
@@ -47,6 +45,6 @@ const CustomersAdmin = () => {
         </section>
         </>
     );
-};
+}
 
 export default CustomersAdmin;
