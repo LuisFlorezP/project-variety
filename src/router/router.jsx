@@ -68,12 +68,12 @@ export const router = createBrowserRouter([
     element: <PasswordsAdmin/>
   },
   {
-    path: "/productsadmin",
-    element: <ProductsAdmin/>
-  },
-  {
     path: "/suppliersadmin",
     element: <SuppliersAdmin/>
+  },
+  {
+    path: "/productsadmin",
+    element: <ProductsAdmin/>
   }
 
 ]);
