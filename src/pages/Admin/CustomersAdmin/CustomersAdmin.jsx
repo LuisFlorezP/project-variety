@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { database } from "../../../components/config/database.jsx";
+import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
@@ -9,7 +9,7 @@ const CustomersAdmin = () => {
     const [customers, setCustomers] = useState([]);
 
     const readCustomers = async () => {
-        const customersDatabase = collection(database, "cliente");
+        const customersDatabase = collection(dataBase, "cliente");
 
         const data = await getDocs(customersDatabase);
 
