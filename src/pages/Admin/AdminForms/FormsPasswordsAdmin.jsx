@@ -1,7 +1,12 @@
+import NavbarAdminForm from "../../../components/NavbarAdminForm/NavbarAdminForm";
+
 const FormsPasswordsAdmin = () => {
     return (
         <>
-          <h1>3</h1>  
+        <NavbarAdminForm
+          comeback={"/passwordsadmin"}
+        />
+          <h1>Forms Passwords Admin</h1>  
         </>
     );
 };
