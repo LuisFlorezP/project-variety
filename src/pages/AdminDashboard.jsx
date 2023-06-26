@@ -16,13 +16,15 @@ const AdminDashboard = () => {
   };
 
   return (
-    <>
+    <section className="containes_admin-dashboard">
       {isAdminLoggedIn ? (
+        <section className="containes_admin-options">
           <AdminOptions />
+        </section>
       ) : (
         <AdminLogin handleLogin={handleLogin} />
       )}
-    </>
+    </section>
   );
 };
 
