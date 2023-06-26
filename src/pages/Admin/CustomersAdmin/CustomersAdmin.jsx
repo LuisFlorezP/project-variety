@@ -1,17 +1,13 @@
-import { Link } from "react-router-dom";
+
+import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 
 const CustomersAdmin = () => {
-    return (
-        <>
-            <section>
-                <Link to={"/adminoptions"}>Volver</ Link>
-                <Link to={"/formcustomersadmin"}>Crear</ Link>
-            </section>
-            <section>
-                
-            </section>
-        </>
-    );
+  return (
+    <>
+      <NavbarAdmin form={"/formcustomersadmin"} />
+      <section></section>
+    </>
+  );
 };
 
 export default CustomersAdmin;

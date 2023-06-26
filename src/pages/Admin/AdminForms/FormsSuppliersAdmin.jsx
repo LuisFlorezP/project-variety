@@ -1,7 +1,12 @@
+import NavbarAdminForm from "../../../components/NavbarAdminForm/NavbarAdminForm";
+
 const FormsSuppliersAdmin = () => {
     return (
         <>
-          <h1>5</h1>  
+        <NavbarAdminForm
+          comeback={"/suppliersadmin"}
+        />
+          <h1>Form Suppliers  Admin</h1>  
         </>
     );
 };

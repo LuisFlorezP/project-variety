@@ -1,12 +1,9 @@
-import { Link } from "react-router-dom";
+import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 
 const SuppliersAdmin = () => {
     return (
         <>
-            <section>
-                <Link to={"/adminoptions"}>Volver</ Link>
-                <Link to={"/formsuppliersadmin"}>Crear</ Link>
-            </section>
+        <NavbarAdmin form={"/formsuppliersadmin"}/>
             <section>
                 
             </section>

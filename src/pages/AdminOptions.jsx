@@ -13,6 +13,23 @@ const AdminOptions = () => {
               description={"Manage page of products"}
               link={"/productsadmin"}
             />
+            <CardAdmin
+              title={"Employee"}
+              description={"Manage page of employees"}
+              link={"/employeesadmin"}
+            />
+            <CardAdmin
+              title={"Password"}
+              description={"Manage page of passwords"}
+              link={"/passwordsadmin"}
+            />
+            <CardAdmin
+              title={"Supplier"}
+              description={"Manage page of suppliers"}
+              link={"/suppliersadmin"}
+            />
+
+
         </>
     );
 };
