@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./ProductsAdmin.css";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
@@ -18,7 +19,7 @@ const ProductsAdmin = () => {
     }, []);
 
     return (
-        <section className="contenedor">
+        <section className="container">
             <NavbarAdmin form={"/formproductsadmin"}/>
             <section>
                 {
