@@ -16,18 +16,16 @@ const Passwords = () => {
 
   return (
     <section>
-      {
-          passwords.map((password) => (
-            <section key={password.id}>
-              <img src={password.imagen_aplicacion}/>
-              <img src={password.nombre_aplicacion}/>
-              <img src={password.password_usuario}/>
-              <p>{password.usuario}</p>
-              <hr />
-            </section>
-          ))
-        }
-      
+      {passwords.map((password) => (
+        <section key={password.id}>
+          <img src={password.imagen} />
+          <img src={password.imagen_aplicacion} />
+          <p>{password.nombre_aplicacion}</p>
+          <p>{password.password_usuario}</p>
+          <p>{password.usuario}</p>
+          <hr />
+        </section>
+      ))}
     </section>
   );
 };
