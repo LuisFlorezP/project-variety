@@ -10,17 +10,13 @@ const CustomersAdmin = () => {
     const [customers, setCustomers] = useState([]);
 
     const readCustomers = async () => {
-        const customersDatabase = collection(dataBase, "cliente");
-
-        const data = await getDocs(customersDatabase);
-
+        const data = await getDocs(collection(dataBase, "cliente"));
         setCustomers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
-
     };
 
     useEffect(() => {
-        readCustomers()
-    }, [])
+        readCustomers();
+    }, []);
 
     return (
         <section className="contendor">
@@ -37,7 +33,8 @@ const CustomersAdmin = () => {
                             <p>{customer.documento}</p>
                             <p>{customer.telefono}</p>
                             <p>{customer.valor}</p>
-                            <Link to={"/"}>Editar</Link>
+                            <img src={customer.imagen} alt="" />
+                            <Link to={""}>Editar</Link>
                             <input type="button" value={'Eliminar'} />
                             <hr />
                         </section>
@@ -47,5 +44,4 @@ const CustomersAdmin = () => {
         </section>
     );
 }
-
 export default CustomersAdmin;
