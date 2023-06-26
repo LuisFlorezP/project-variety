@@ -54,26 +54,6 @@ export const router = createBrowserRouter([
         element: <AdminDashboard />,
       },
     ],
-  },
-  {
-    path: "/customersadmin",
-    element: <CustomersAdmin/>
-  },
-  {
-    path: "/employeesadmin",
-    element: <EmployeesAdmin/>
-  },
-  {
-    path: "/passwordsadmin",
-    element: <PasswordsAdmin/>
-  },
-  {
-    path: "/suppliersadmin",
-    element: <SuppliersAdmin/>
-  },
-  {
-    path: "/productsadmin",
-    element: <ProductsAdmin/>
   }
 
 ]);
