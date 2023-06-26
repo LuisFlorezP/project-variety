@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./CustomersAdmin.css";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
@@ -22,7 +23,7 @@ const CustomersAdmin = () => {
     }, [])
 
     return (
-        <>
+        <section className="contendor">
             <NavbarAdmin form={"/formcustomersadmin"} />
             <section>
                 {
@@ -42,8 +43,8 @@ const CustomersAdmin = () => {
                         </section>
                     ))
                 }
+            </section>
         </section>
-        </>
     );
 }
 
