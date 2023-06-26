@@ -7,7 +7,7 @@ const FormsEmployeesAdmin = () => {
             <section>
                 <form action="">
                     <label for="nombre">Name:</label>
-                    <input type="text" id="nombre" size="200px" required placeholder="Enter customer name..."/><br />
+                    <input type="text" id="nombre" size="200px" required placeholder="Enter employee name..."/><br />
                     <label for="documento">Document:</label>
                     <input type="text" id="documento" required placeholder="Enter identity document number..." /><br />
                     <label for="correo">Email:</label>
