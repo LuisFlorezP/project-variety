@@ -19,6 +19,8 @@ import FormsEmployeesAdmin from "../pages/Admin/AdminForms/FormsEmployeesAdmin";
 import FormsPasswordsAdmin from "../pages/Admin/AdminForms/FormsPasswordsAdmin";
 import FormsProductsAdmin from "../pages/Admin/AdminForms/FormsProductsAdmin";
 import FormsSuppliersAdmin from "../pages/Admin/AdminForms/FormsSuppliersAdmin";
+import AdminOptions from "../pages/AdminOptions";
+import LayoutPrivate from "../layout/LayoutPrivate";
 
 export const router = createBrowserRouter([
   {
@@ -58,53 +60,63 @@ export const router = createBrowserRouter([
         path: "/admin",
         element: <AdminDashboard />,
       },
+      {
+        path: "/adminoptions",
+        element: <AdminOptions/>
+      }
     ],
   },
   {
-    path: "/customersadmin",
-    element: <CustomersAdmin/>
-  },
-  {
-    path: "/employeesadmin",
-    element: <EmployeesAdmin/>
-  },
-  {
-    path: "/passwordsadmin",
-    element: <PasswordsAdmin/>
-  },
-  {
-    path: "/suppliersadmin",
-    element: <SuppliersAdmin/>
-  },
-  {
-    path: "/productsadmin",
-    element: <ProductsAdmin/>
-  },
-  {
-    path: "/formcustomersadmin",
-    element: <FormsCustomersAdmin/>
-  }
-  ,
-  {
-    path: "formemployeesadmin",
-    element: <FormsEmployeesAdmin/>  
-  }
-  ,
-  {
-    path: "formproductsadmin",
-    element: <FormsPasswordsAdmin/>
-  }
-  ,
-  {
-    path: "formproductsadmin",
-    element: <FormsProductsAdmin/>
-    
-  },
-  {
-    path: "formsuppliersadmin",
-    element: <FormsSuppliersAdmin/>
-    
+    path: "/",
+    element: <LayoutPrivate/>,
+    children: [
+      {
+        path: "/customersadmin",
+        element: <CustomersAdmin/>
+      },
+      {
+        path: "/employeesadmin",
+        element: <EmployeesAdmin/>
+      },
+      {
+        path: "/passwordsadmin",
+        element: <PasswordsAdmin/>
+      },
+      {
+        path: "/suppliersadmin",
+        element: <SuppliersAdmin/>
+      },
+      {
+        path: "/productsadmin",
+        element: <ProductsAdmin/>
+      },
+      {
+        path: "/formcustomersadmin",
+        element: <FormsCustomersAdmin/>
+      }
+      ,
+      {
+        path: "/formemployeesadmin",
+        element: <FormsEmployeesAdmin/>  
+      }
+      ,
+      {
+        path: "/formpasswordsadmin",
+        element: <FormsPasswordsAdmin/>
+      }
+      ,
+      {
+        path: "/formproductsadmin",
+        element: <FormsProductsAdmin/>
+        
+      },
+      {
+        path: "/formsuppliersadmin",
+        element: <FormsSuppliersAdmin/>
+        
+      }
+    ]
   }
   
-
+  
 ]);
