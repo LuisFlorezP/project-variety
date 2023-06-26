@@ -28,7 +28,7 @@ const Customers = () => {
               <p>{customer.documento}</p>
               <p>{customer.telefono}</p>
               <p>{customer.valor}</p>
-              <img src={customer.imagen} alt="" />
+              <img src={customer.imagen}/>
               <hr />
             </section>
           ))
