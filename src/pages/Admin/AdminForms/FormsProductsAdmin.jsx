@@ -20,7 +20,7 @@ const FormsProductsAdmin = () => {
                     <input type="file" id="imagen" required/><br />
                     <input type="submit" value="Submit" />
                 </form>
-            </section>
+            </section> 
         </>
     );
 };
