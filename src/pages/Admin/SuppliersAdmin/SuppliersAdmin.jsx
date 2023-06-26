@@ -4,8 +4,8 @@ const SuppliersAdmin = () => {
     return (
         <>
             <section>
-                <button>Volver</button>
-                <Link to={""}>Crear</ Link>
+                <Link to={"/adminoptions"}>Volver</ Link>
+                <Link to={"/formsuppliersadmin"}>Crear</ Link>
             </section>
             <section>
                 

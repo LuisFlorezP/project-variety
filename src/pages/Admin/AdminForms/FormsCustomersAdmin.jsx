@@ -1,7 +1,7 @@
 const FormsCustomersAdmin = () => {
     return (
         <>
-            
+            <h1>1</h1>
         </>
     );
 };

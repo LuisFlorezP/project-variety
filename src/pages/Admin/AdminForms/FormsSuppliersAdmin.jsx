@@ -1,7 +1,7 @@
 const FormsSuppliersAdmin = () => {
     return (
         <>
-            
+          <h1>5</h1>  
         </>
     );
 };

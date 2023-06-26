@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AdminLogin from "../components/AdminLogin/AdminLogin";
-import CardAdmin from "../components/AdminCard/CardAdmin";
+import AdminOptions from "./AdminOptions";
 
 const AdminDashboard = () => {
   const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
@@ -18,18 +18,7 @@ const AdminDashboard = () => {
   return (
     <>
       {isAdminLoggedIn ? (
-          <section>
-            <CardAdmin
-              title={"Customers"}
-              description={"Manage page of customers"}
-              link={""}
-            />
-              <CardAdmin
-              title={"Product"}
-              description={"Manage page of products"}
-              link={""}
-            />
-          </section>
+          <AdminOptions />
       ) : (
         <AdminLogin handleLogin={handleLogin} />
       )}

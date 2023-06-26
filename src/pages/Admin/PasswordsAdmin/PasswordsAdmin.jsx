@@ -4,8 +4,8 @@ const PasswordsAdmin = () => {
     return (
         <>
             <section>
-                <button>Volver</button>
-                <Link to={""}>Crear</ Link>
+                <Link to={"/adminoptions"}>Volver</ Link>
+                <Link to={"/formpasswordsadmin"}>Crear</ Link>
             </section>
             <section>
                 

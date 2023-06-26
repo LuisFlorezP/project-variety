@@ -19,6 +19,7 @@ import FormsEmployeesAdmin from "../pages/Admin/AdminForms/FormsEmployeesAdmin";
 import FormsPasswordsAdmin from "../pages/Admin/AdminForms/FormsPasswordsAdmin";
 import FormsProductsAdmin from "../pages/Admin/AdminForms/FormsProductsAdmin";
 import FormsSuppliersAdmin from "../pages/Admin/AdminForms/FormsSuppliersAdmin";
+import AdminOptions from "../pages/AdminOptions";
 
 export const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
         path: "/admin",
         element: <AdminDashboard />,
       },
+      {
+        path: "/adminoptions",
+        element: <AdminOptions/>
+      }
     ],
   },
   {
@@ -86,22 +91,22 @@ export const router = createBrowserRouter([
   }
   ,
   {
-    path: "formemployeesadmin",
+    path: "/formemployeesadmin",
     element: <FormsEmployeesAdmin/>  
   }
   ,
   {
-    path: "formproductsadmin",
+    path: "/formpasswordsadmin",
     element: <FormsPasswordsAdmin/>
   }
   ,
   {
-    path: "formproductsadmin",
+    path: "/formproductsadmin",
     element: <FormsProductsAdmin/>
     
   },
   {
-    path: "formsuppliersadmin",
+    path: "/formsuppliersadmin",
     element: <FormsSuppliersAdmin/>
     
   }

@@ -4,8 +4,8 @@ const ProductsAdmin = () => {
     return (
         <>
             <section>
-                <button>Volver</button>
-                <Link to={""}>Crear</ Link>
+                <Link to={"/adminoptions"}>Volver</ Link>
+                <Link to={"/formproductsadmin"}>Crear</ Link>
             </section>
             <section>
                 
