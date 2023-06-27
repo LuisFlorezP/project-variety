@@ -42,7 +42,7 @@ const SuppliersAdmin = () => {
                 <p>{supplier.direccion}</p>
                 <p>{supplier.nit}</p>
                 <p>{supplier.nombre_gerente}</p>
-                <p>{suppliers.telefono_gerente}</p>
+                <p>{supplier.telefono_gerente}</p>
               </section>
             </section>
             <section className="buttons-suppliers">
