@@ -1,9 +1,9 @@
+import './ProductsAdmin.css';
 import { Link } from "react-router-dom";
-import "./ProductsAdmin.css";
+import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 
 const ProductsAdmin = () => {
 
@@ -18,28 +18,36 @@ const ProductsAdmin = () => {
         readProducts();
     }, []);
 
-    return (
-        <section className="container">
-            <NavbarAdmin form={"/formproductsadmin"}/>
-            <section>
-                {
-                    products.map((product) => (
-                        <section key={product.id}>
-                            <h1>{product.nombre}</h1>
+  return (
+    <>
+    <NavbarAdmin form={"/formproductsadmin"} />
+        <section className="card-products">
+        {
+            products.map((product) => (
+                <section key={product.id}>
+                    <section className="card-header-products">
+                        <h1>{product.nombre}</h1>
+                    </section>
+                    <section className="card-body-products">
+                        <section className="card-image-products">
+                            <img src={product.imagen} alt="Imagen" />
+                        </section>
+                        <section className="card-info-products">
                             <p>{product.descripcion}</p>
                             <p>{product.categoria}</p>
                             <p>{product.valor}</p>
                             <p>{product.cantidad}</p>
-                            <img src={product.imagen} alt="" />
-                            <Link to={""}>Editar</Link>
-                            <input type="button" value={'Eliminar'} />
-                            <hr />
                         </section>
-                    ))
-                }
-            </section>
-        </section>
+                    </section>
+                    <section className="buttons-products">
+                        <Link to={""} className='editar-products'>Editar</Link>
+                        <input type="button" className='eliminar-products' value={'Eliminar'} />
+                    </section>
+                </section>
+            ))
+        }
+     </section>
+    </>
     );
-};
-
+}
 export default ProductsAdmin;

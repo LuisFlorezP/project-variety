@@ -1,28 +1,54 @@
-import './Card.css';
+import './ProductsAdmin.css';
+import { Link } from "react-router-dom";
+import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import { dataBase } from "../../../components/config/database.jsx";
+import { collection, getDocs } from "@firebase/firestore";
+import { useEffect, useState } from "react";
 
-const CardSuppliers = ({ id, nombre, barrio, ciudad, correo, direccion, documento, telefono, valor, imagen }) => {
+const SuppliersAdmin = () => {
+
+  const [suppliers, setSuppliers] = useState([]);
+
+  const readSuppliers = async () => {
+      const data = await getDocs(collection(dataBase, "proveedor"));
+      setSuppliers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+  };
+
+  useEffect(() => {
+      readSuppliers();
+  }, []);
+
   return (
-    <section className="card">
-      <section className="card-header">
-        <h3>{nombre}</h3>
-      </section>
-      <section className="card-body">
-        <section className="card-image">
-          <img src={imagen} alt={nombre} />
-        </section>
-        <section className="card-info">
-          <p>ID: {id}</p>
-          <p>Barrio: {barrio}</p>
-          <p>Ciudad: {ciudad}</p>
-          <p>Correo: {correo}</p>
-          <p>Dirección: {direccion}</p>
-          <p>Documento: {documento}</p>
-          <p>Teléfono: {telefono}</p>
-          <p>Valor: {valor}</p>
-        </section>
-      </section>
-    </section>
-  );
-};
-
-export default CardSuppliers;
+    <>
+    <NavbarAdmin form={"/formcustomersadmin"} />
+        <section className="card-suppliers">
+        {
+            suppliers.map((supplier) => (
+                <section key={supplier.id}>
+                    <section className="card-header-suppliers">
+                        <h1>{supplier.nombre}</h1>
+                    </section>
+                    <section className="card-body-suppliers">
+                        <section className="card-image-suppliers">
+                          <img src={supplier.imagen_gerente} alt="Imagen Gerente" />
+                          <img src={supplier.logo_empresa} alt="Logo Empresa" />
+                        </section>
+                        <section className="card-info-suppliers">
+                        <p>{supplier.ciudad}</p>
+                            <p>{supplier.direccion}</p>
+                            <p>{supplier.nit}</p>
+                            <p>{supplier.nombre_gerente}</p>
+                        </section>
+                    </section>
+                    <section className="buttons-suppliers">
+                        <Link to={""} className='editar-suppliers'>Editar</Link>
+                        <input type="button" className='eliminar-suppliers' value={'Eliminar'} />
+                    </section>
+                </section>
+            ))
+        }
+     </section>
+    </>
+    );
+}
+export default SuppliersAdmin;

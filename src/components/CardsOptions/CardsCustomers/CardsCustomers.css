@@ -1,13 +1,13 @@
 .card {
     background-color: #1f1f1f;
     color: #fff;
-    width: 1000px;
+    width: 70%;
+    margin: 0px auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    
 
   }
+
   
   .card > section {
     width: 300px;
