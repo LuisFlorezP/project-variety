@@ -14,7 +14,7 @@ const FormsEmployeesAdmin = () => {
     const [direccion, setDireccion] = useState('');
     const [ciudad, setCiudad] = useState('');
     const [file, setFile] = useState(null);
-    const readCustomers = useNavigate();
+    const readEmployees = useNavigate();
 
     const saveEmployee = async () => {
         const imagen = await saveFile(file);
@@ -30,7 +30,7 @@ const FormsEmployeesAdmin = () => {
             imagen
         };
         await addDoc(employeeCollection, employee);
-        readCustomers('/employeesadmin');
+        readEmployees('/employeesadmin');
     };
 
     return (
