@@ -16,7 +16,7 @@ const SuppliersAdmin = () => {
   const deleteSupplier = async (id) => {
     const deletedSupplier = doc(dataBase, "proveedor", id);
     await deleteDoc(deletedSupplier);
-    setSuppliers(suppliers.filter((supplier) => supplier.id !== id));
+    readSuppliers();
   };
 
   useEffect(() => {

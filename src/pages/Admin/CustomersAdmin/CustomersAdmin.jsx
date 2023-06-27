@@ -17,7 +17,7 @@ const customerAdmin = () => {
   const deleteCustomer = async (id) => {
     const deletedCustomer = doc(dataBase, "cliente", id);
     await deleteDoc(deletedCustomer);
-    setCustomers(customers.filter((customer) => customer.id === id));
+    readCustomers();
   };
 
   // eslint-disable-next-line react-hooks/rules-of-hooks

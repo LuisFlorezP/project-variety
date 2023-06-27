@@ -16,7 +16,7 @@ const ProductsAdmin = () => {
   const deleteProduct = async (id) => {
     const deletedProduct = doc(dataBase, "producto", id);
     await deleteDoc(deletedProduct);
-    setProducts(products.filter((product) => product.id !== id));
+    readProducts();
   };
 
   useEffect(() => {

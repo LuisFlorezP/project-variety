@@ -16,7 +16,7 @@ const EmployeesAdmin = () => {
   const deleteEmployee = async (id) => {
     const deletedEmployee = doc(dataBase, "empleado", id);
     await deleteDoc(deletedEmployee);
-    setEmployees(employees.filter((employee) => employee.id !== id));
+    readEmployees();
   };
 
   useEffect(() => {

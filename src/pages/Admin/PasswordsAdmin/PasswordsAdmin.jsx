@@ -16,7 +16,7 @@ const PasswordsAdmin = () => {
   const deletePassword = async (id) => {
     const deletedPassword = doc(dataBase, "password", id);
     await deleteDoc(deletedPassword);
-    setPasswords(passwords.filter((password) => password.id !== id));
+    readPasswords();
   };
 
   useEffect(() => {
