@@ -34,7 +34,7 @@ const SuppliersAdmin = () => {
             </section>
             <section className="card-body-suppliers">
               <section className="card-image-suppliers">
-                <img src={supplier.imagen_gerente} alt="Imagen Gerente" />
+                <img src={supplier.imagen_gerente} alt="Image Gerente" />
                 <img src={supplier.logo_empresa} alt="Logo Empresa" />
               </section>
               <section className="card-info-suppliers">
@@ -42,6 +42,7 @@ const SuppliersAdmin = () => {
                 <p>{supplier.direccion}</p>
                 <p>{supplier.nit}</p>
                 <p>{supplier.nombre_gerente}</p>
+                <p>{suppliers.telefono_gerente}</p>
               </section>
             </section>
             <section className="buttons-suppliers">
