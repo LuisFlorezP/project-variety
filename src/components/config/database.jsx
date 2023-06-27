@@ -3,7 +3,6 @@ import { getFirestore } from "@firebase/firestore";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
 
-
 const firebaseConfig = {
   apiKey: "AIzaSyDr5_UMe5KAyVBOOGmF3y2AODgLBDnG3s0",
   authDomain: "project-variety.firebaseapp.com",
