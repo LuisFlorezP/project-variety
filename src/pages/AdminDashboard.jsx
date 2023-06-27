@@ -18,7 +18,7 @@ const AdminDashboard = () => {
   return (
     <>
       {isAdminLoggedIn ? (
-          <AdminOptions />
+        <AdminOptions />
       ) : (
         <AdminLogin handleLogin={handleLogin} />
       )}

@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs, doc,deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
+=======
+import "./CustomersAdmin.css";  
+>>>>>>> 284786ee2676c97053886823fedcbdc5a54643d2
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import CardsCustomers from "../../../components/CardsOptions/CardsCustomers/CardsCustomers";
+
 
 const CustomersAdmin = () => {
 
+<<<<<<< HEAD
     const [customers, setCustomers] = useState([]);
 
     const readCustomers = async () => {
@@ -59,8 +66,18 @@ const CustomersAdmin = () => {
                     ))
                 }
             </section>
+=======
+    return (
+        <section>
+            <NavbarAdmin form={"/formcustomersadmin"} /> 
+                <section>
+                    <section>
+                        <CardsCustomers/>
+                    </section>
+                </section>
+>>>>>>> 284786ee2676c97053886823fedcbdc5a54643d2
         </section>
+
     );
 }
-
 export default CustomersAdmin;
