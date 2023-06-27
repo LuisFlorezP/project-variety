@@ -2,12 +2,13 @@ import './customersAdmin.css';
 import { Link } from "react-router-dom";
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs,doc,deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 
 
 const customerAdmin = () => {
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [customers, setCustomers] = useState([]);
 
     const readCustomers = async () => {
@@ -15,6 +16,13 @@ const customerAdmin = () => {
         setCustomers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
     };
 
+    const deleteCustomer = async (id) => {
+        const deletedCustomer = (doc(dataBase,"cliente",id))
+        await deleteDoc(deletedCustomer)
+        setCustomers(customers.filter((customer)=>customer.id === id))
+    }
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         readCustomers();
     }, []);
@@ -45,7 +53,7 @@ const customerAdmin = () => {
                     </section>
                     <section className="buttons-customers">
                         <Link to={""} className='editar-customers'>Editar</Link>
-                        <input type="button" className='eliminar-customers' value={'Eliminar'} />
+                        <input type="button" className='eliminar-customers' value={'Eliminar'} onClick={()=>{deleteCustomer(customer.id)}}/>
                     </section>
                 </section>
             ))

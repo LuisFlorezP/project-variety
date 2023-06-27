@@ -2,7 +2,7 @@ import './SuppliersAdmin.css';
 import { Link } from "react-router-dom";
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 
 const SuppliersAdmin = () => {
@@ -13,6 +13,12 @@ const SuppliersAdmin = () => {
       const data = await getDocs(collection(dataBase, "proveedor"));
       setSuppliers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
   };
+
+  const deleteSupplier = async (id) => {
+    const deletedSupplier = doc(dataBase,"proveedor", id)
+    await deleteDoc(deletedSupplier);
+    setSuppliers(suppliers.filter((supplier)=> supplier.id !== id));
+  }
 
   useEffect(() => {
       readSuppliers();
@@ -42,7 +48,7 @@ const SuppliersAdmin = () => {
                     </section>
                     <section className="buttons-suppliers">
                         <Link to={""} className='editar-suppliers'>Editar</Link>
-                        <input type="button" className='eliminar-suppliers' value={'Eliminar'} />
+                        <input type="button" className='eliminar-suppliers' value={'Eliminar'} onClick={()=> {deleteSupplier(supplier.id)}} />
                     </section>
                 </section>
             ))

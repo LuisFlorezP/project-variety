@@ -2,7 +2,7 @@ import './ProductsAdmin.css';
 import { Link } from "react-router-dom";
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs,doc,deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 
 const ProductsAdmin = () => {
@@ -13,6 +13,13 @@ const ProductsAdmin = () => {
         const data = await getDocs(collection(dataBase, "producto"));
         setProducts(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
     };
+
+    const deleteProduct = async (id) => {
+        const deletedProduct = doc(dataBase,"producto",id)
+        await deleteDoc(deletedProduct)
+        setProducts(products.filter((product) => product.id !== id));
+
+    }
 
     useEffect(() => {
         readProducts();
@@ -41,7 +48,7 @@ const ProductsAdmin = () => {
                     </section>
                     <section className="buttons-products">
                         <Link to={""} className='editar-products'>Editar</Link>
-                        <input type="button" className='eliminar-products' value={'Eliminar'} />
+                        <input type="button" className='eliminar-products' value={'Eliminar'} onClick={()=>{deleteProduct(product.id)}} />
                     </section>
                 </section>
             ))

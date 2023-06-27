@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./PasswordsAdmin.css";
 import { dataBase } from "../../../components/config/database.jsx";
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 
@@ -13,6 +13,14 @@ const PasswordsAdmin = () => {
         const data = await getDocs(collection(dataBase, "password"));
         setPasswords(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
     };
+
+    const deletePassword = async (id) => {
+        const deletedPassword = doc(dataBase,"password",id)
+        await deleteDoc(deletedPassword);
+        setPasswords(passwords.filter((password) => password.id !== id));
+    }
+
+
 
     useEffect(() => {
         readPasswords();
@@ -40,7 +48,7 @@ const PasswordsAdmin = () => {
                         </section>
                         <section className="buttons-passwords">
                             <Link to={""} className='editar-passwords'>Editar</Link>
-                            <input type="button" className='eliminar-passwords' value={'Eliminar'} />
+                            <input type="button" className='eliminar-passwords' value={'Eliminar'} onClick={()=>{deletePassword(password.id)}} />
                         </section>
                     </section>
                 ))

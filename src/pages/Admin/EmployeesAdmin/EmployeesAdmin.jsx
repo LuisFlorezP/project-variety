@@ -2,7 +2,7 @@ import './EmployeesAdmin.css';
 import { Link } from "react-router-dom";
 import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
-import { collection, getDocs } from "@firebase/firestore";
+import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 
 
@@ -13,6 +13,12 @@ const EmployeesAdmin = () => {
   const readEmployees = async () => {
       const data = await getDocs(collection(dataBase, "empleado"));
       setEmployees(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+  }
+
+  const deleteEmployee = async (id) => {
+    const deletedEmployee = doc(dataBase,"empleado",id);
+    await deleteDoc(deletedEmployee);
+    setEmployees(employees.filter((employee)=>employee.id !== id))
   }
 
   useEffect(() => {
@@ -44,7 +50,7 @@ const EmployeesAdmin = () => {
                     </section>
                     <section className="buttons-employee">
                         <Link to={""} className='editar-employee'>Editar</Link>
-                        <input type="button" className='eliminar-employee' value={'Eliminar'} />
+                        <input type="button" className='eliminar-employee' value={'Eliminar'} onClick={()=> {deleteEmployee(employee.id)}} />
                     </section>
                 </section>
             ))
