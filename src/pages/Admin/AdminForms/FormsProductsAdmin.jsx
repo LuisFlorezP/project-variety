@@ -1,24 +1,51 @@
 import NavbarAdminForm from "../../../components/NavbarAdminForm/NavbarAdminForm";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { collection, addDoc } from "@firebase/firestore";
+import { dataBase, saveFile } from "../../../components/config/database";
 
 const FormsProductsAdmin = () => {
+    const [nombre, setNombre] = useState('');
+    const [descripcion, setDescripcion] = useState('');
+    const [categoria, setCategoria] = useState('');
+    const [valor, setValor] = useState(0);
+    const [cantidad, setCantidad] = useState(0);
+    const [file, setFile] = useState(null);
+    const readProducts = useNavigate();
+
+    const saveProduct = async () => {
+        const imagen = await saveFile(file);
+        const productCollection = collection(dataBase, "producto");
+        const product = {
+            nombre, 
+            descripcion,
+            categoria,
+            valor,
+            cantidad,
+            imagen
+        };
+        await addDoc(productCollection, product);
+        readProducts('/productsadmin');
+    };
+
     return (
         <>
             <NavbarAdminForm comeback={"/productsadmin"} />
             <section>
                 <form action="">
-                    <label for="nombre">Name:</label>
-                    <input type="text" id="nombre" size="200px" required placeholder="Enter product name..."/><br />
-                    <label for="descripcion">Description:</label>
-                    <input type="text" id="descripcion" required placeholder="Enter product description..." /><br />
-                    <label for="categoria">Category:</label>
-                    <input type="text" id="categoria" required placeholder="Enter category..." /><br />
-                    <label for="valor">Price:</label>
-                    <input type="number" id="valor" required placeholder="Enter product price..." /><br />
-                    <label for="cantidad">Amount:</label>
-                    <input type="number" id="cantidad" required placeholder="Enter amount..." /><br />
-                    <label for="imagen">Product image:</label>
-                    <input type="file" id="imagen" required/><br />
-                    <input type="submit" value="Submit" />
+                    <label>Name:</label>
+                    <input type={"text"} id={"nombre"} placeholder={"Enter product name..."} onChange={e => setNombre(e.target.value)} /><br />
+                    <label>Description:</label>
+                    <input type={"text"} id={"descripcion"} placeholder={"Enter product description..."} onChange={e => setDescripcion(e.target.value)} /><br />
+                    <label>Category:</label>
+                    <input type={"text"} id={"categoria"} placeholder={"Enter category..."} onChange={e => setCategoria(e.target.value)} /><br />
+                    <label>Price:</label>
+                    <input type={"number"} id={"valor"} placeholder={"Enter product price..."} onChange={e => setValor(e.target.value)} /><br />
+                    <label>Amount:</label>
+                    <input type={"number"} id={"cantidad"} placeholder={"Enter amount..."} onChange={e => setCantidad(e.target.value)} /><br />
+                    <label>Product image:</label>
+                    <input type={"file"} id={"imagen"} onChange={e => setFile(e.target.files[0])} /><br />
+                    <input type={"button"} value={"Submit"} onClick={saveProduct} />
                 </form>
             </section> 
         </>
