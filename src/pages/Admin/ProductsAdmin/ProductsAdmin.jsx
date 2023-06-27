@@ -34,7 +34,7 @@ const ProductsAdmin = () => {
             </section>
             <section className="card-body-products">
               <section className="card-image-products">
-                <img src={product.imagen} alt="Imagen" />
+                <img src={product.imagen} alt="Image" />
               </section>
               <section className="card-info-products">
                 <p>{product.descripcion}</p>

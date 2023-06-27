@@ -22,8 +22,8 @@ const customerAdmin = () => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    readCustomers();
-  }, []);
+      readCustomers();
+    }, []);
 
   return (
     <>
@@ -49,7 +49,7 @@ const customerAdmin = () => {
               </section>
             </section>
             <section className="buttons-customers">
-              <Link to={""} className="editar-customers">
+              <Link to={"/EditServiceCustomer/" + customer.id} className="editar-customers">
                 Editar
               </Link>
               <input

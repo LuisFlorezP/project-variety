@@ -14,7 +14,7 @@ const FormsCustomersAdmin = () => {
     const [barrio, setBarrio] = useState('');
     const [file, setFile] = useState(null);
     const readCustomers = useNavigate();
-
+    
     const saveCustomer = async () => {
         const imagen = await saveFile(file);
         const customerCollection = collection(dataBase, "cliente");
