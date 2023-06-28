@@ -41,7 +41,7 @@ const FormsEmployeesAdmin = () => {
                     <label>Name:</label>
                     <input type={"text"} id={"nombre"} placeholder={"Enter employee name..."} onChange={e => setNombre(e.target.value)} /><br />
                     <label>Document:</label>
-                    <input type={"text"} id={"documento"} placeholder={"Enter identity document number..."} setDocumento={e => setCargo(e.target.value)} /><br />
+                    <input type={"text"} id={"documento"} placeholder={"Enter identity document number..."} onChange={e => setDocumento(e.target.value)} /><br />
                     <label>Email:</label>
                     <input type={"text"} id={"correo"} placeholder={"Enter email..."} onChange={e => setCorreo(e.target.value)} /><br />
                     <label>Title:</label>
