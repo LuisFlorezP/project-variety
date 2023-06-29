@@ -1,6 +1,6 @@
 import "./EmployeesAdmin.css";
 import { Link } from "react-router-dom";
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import NavbarAdmin from "../../../components/Navbar/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";

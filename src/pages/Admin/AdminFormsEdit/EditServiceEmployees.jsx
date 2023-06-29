@@ -1,4 +1,4 @@
-import NavbarAdminForm from "../../../components/NavbarAdminForm/NavbarAdminForm";
+import NavbarAdminForm from "../../../components/Navbar/NavbarAdminForm";
 import { updateDoc, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
