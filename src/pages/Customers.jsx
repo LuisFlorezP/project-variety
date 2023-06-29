@@ -20,13 +20,13 @@ const Customers = () => {
         <section key={customer.id} className="container__card-general">
           <section className="container__card-interno">
             <img src={customer.imagen} className="card__img" />
-            <p> <span>Nombre:</span> {customer.nombre}</p>
-            <p> <span>Documento:</span>{customer.documento}</p>
-            <p> <span>Teléfono:</span>{customer.telefono}</p>
-            <p> <span>Correo:</span> {customer.correo}</p>
-            <p> <span>Dirección:</span> {customer.direccion}</p>
-            <p> <span>Ciudad:</span> {customer.ciudad}</p>
-            <p> <span>Barrio:</span> {customer.barrio}</p>
+            <p> <span>Name:</span> {customer.nombre}</p>
+            <p> <span>Document:</span>{customer.documento}</p>
+            <p> <span>Phone:</span>{customer.telefono}</p>
+            <p> <span>Email:</span> {customer.correo}</p>
+            <p> <span>Address:</span> {customer.direccion}</p>
+            <p> <span>City:</span> {customer.ciudad}</p>
+            <p> <span>Neighborhood:</span> {customer.barrio}</p>
           </section>
         </section>
       ))}

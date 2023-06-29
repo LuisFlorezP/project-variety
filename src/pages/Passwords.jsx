@@ -20,14 +20,14 @@ const Passwords = () => {
         <section key={password.id} className="container__card-general">
           <secion className="container__card-interno">
             <p>
-              <span>Usuario: </span> {password.usuario}
+              <span>User: </span> {password.usuario}
             </p>
             <p>
-              <span>Contraseña: </span> {password.password_usuario}
+              <span>Password: </span> {password.password_usuario}
             </p>
             <img src={password.imagen} />
             <p>
-              <span>Aplicación: </span> {password.nombre_aplicacion}
+              <span>Application: </span> {password.nombre_aplicacion}
             </p>
             <img src={password.imagen_aplicacion} />
           </secion>

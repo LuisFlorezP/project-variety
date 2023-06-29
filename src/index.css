@@ -118,4 +118,54 @@ body {
 
 .container__card-interno span {
   color: rgba(255, 255, 255, 0.738);
+} 
+
+.container-table-general {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-table {
+  /* background-color: red; */
+  width: 90%;
+  margin: 40px;
+}
+
+.text-th {
+  text-transform: uppercase;
+  color: white;
+  padding: 30px;
+}
+
+#td-img-table {
+  width: 50px;
+  margin: 0px auto;
+}
+
+.row-table td {
+  margin: 0px auto;
+  width: 400px;
+}
+
+.row-table td {
+  text-align: center;
+}
+
+#img-table {
+  width: 150px;
+  height: 150px;
+}
+
+thead {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+th, td {
+  border: 2px solid #6d6d8a;
+  padding: 8px 15px;
+  color: rgb(174, 174, 174);
 }
