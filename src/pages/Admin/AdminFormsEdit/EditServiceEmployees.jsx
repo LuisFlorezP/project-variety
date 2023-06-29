@@ -1,4 +1,4 @@
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import NavbarAdminForm from "../../../components/NavbarAdminForm/NavbarAdminForm";
 import { updateDoc, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -48,7 +48,7 @@ const EditServiceEmployees = () => {
 
   return (
     <section>
-        <NavbarAdmin form={"/formemployeesadmin"}/>
+        <NavbarAdminForm comeback={"/employeesadmin"} />
       <form>
         <input
           className="inputNombre"
