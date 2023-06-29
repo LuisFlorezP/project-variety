@@ -50,12 +50,12 @@ const EmployeesAdmin = () => {
             </section>
             <section className="buttons-employee">
               <Link to={"/EditServiceEmployee/" + employee.id} className="editar-employee">
-                Editar
+                Edit
               </Link>
               <input
                 type="button"
                 className="eliminar-employee"
-                value={"Eliminar"}
+                value={"Delete"}
                 onClick={() => {
                   deleteEmployee(employee.id);
                 }}

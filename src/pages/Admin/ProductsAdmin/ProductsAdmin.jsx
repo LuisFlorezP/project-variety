@@ -1,3 +1,4 @@
+
 import "./ProductsAdmin.css";
 import { Link } from "react-router-dom";
 import NavbarAdmin from "../../../components/Navbar/NavbarAdmin";
@@ -45,12 +46,12 @@ const ProductsAdmin = () => {
             </section>
             <section className="buttons-products">
               <Link to={"/EditServiceProduct/" + product.id} className="editar-products">
-                Editar
+                Edit
               </Link>
               <input
                 type="button"
                 className="eliminar-products"
-                value={"Eliminar"}
+                value={"Delete"}
                 onClick={() => {
                   deleteProduct(product.id);
                 }}

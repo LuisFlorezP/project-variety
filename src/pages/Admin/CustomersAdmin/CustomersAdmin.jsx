@@ -50,12 +50,12 @@ const customerAdmin = () => {
             </section>
             <section className="buttons-customers">
               <Link to={"/EditServiceCustomer/" + customer.id} className="editar-customers">
-                Editar
+                Edit
               </Link>
               <input
                 type="button"
                 className="eliminar-customers"
-                value={"Eliminar"}
+                value={"Delete"}
                 onClick={() => {
                   deleteCustomer(customer.id);
                 }}

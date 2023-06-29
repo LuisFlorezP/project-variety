@@ -45,12 +45,12 @@ const PasswordsAdmin = () => {
             </section>
             <section className="buttons-passwords">
               <Link to={"/EditServicePassword/" + password.id} className="editar-passwords">
-                Editar
+                Edit
               </Link>
               <input
                 type="button"
                 className="eliminar-passwords"
-                value={"Eliminar"}
+                value={"Delete"}
                 onClick={() => {
                   deletePassword(password.id);
                 }}

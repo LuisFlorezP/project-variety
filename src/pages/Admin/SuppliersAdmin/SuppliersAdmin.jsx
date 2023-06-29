@@ -47,12 +47,12 @@ const SuppliersAdmin = () => {
             </section>
             <section className="buttons-suppliers">
               <Link to={"/EditServiceSupplier/" + supplier.id} className="editar-suppliers">
-                Editar
+                Edit
               </Link>
               <input
                 type="button"
                 className="eliminar-suppliers"
-                value={"Eliminar"}
+                value={"Delete"}
                 onClick={() => {
                   deleteSupplier(supplier.id);
                 }}
