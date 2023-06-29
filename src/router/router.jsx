@@ -22,6 +22,7 @@ import FormsSuppliersAdmin from "../pages/Admin/AdminForms/FormsSuppliersAdmin";
 import AdminOptions from "../pages/AdminOptions";
 import LayoutPrivate from "../layout/LayoutPrivate";
 import EditServiceCustomers from "../pages/Admin/AdminFormsEdit/EditServiceCustomers";
+import EditServiceEmployees from "../pages/Admin/AdminFormsEdit/EditServiceEmployees";
 
 export const router = createBrowserRouter([
   {
@@ -119,6 +120,11 @@ export const router = createBrowserRouter([
       {
         path: "/EditServiceCustomer/:id",
         element: <EditServiceCustomers/>
+        
+      },
+      {
+        path: "/EditServiceEmployee/:id",
+        element: <EditServiceEmployees/>
         
       },
     ]

@@ -41,14 +41,14 @@ const EmployeesAdmin = () => {
               <section className="card-info-employee">
                 <p>{employee.cargo}</p>
                 <p>{employee.correo}</p>
-                <p>{employee.direccion_residencia}</p>
+                <p>{employee.direccion}</p>
                 <p>{employee.documento}</p>
                 <p>{employee.numero_cuenta_bancaria}</p>
                 <p>{employee.salario}</p>
               </section>
             </section>
             <section className="buttons-employee">
-              <Link to={""} className="editar-employee">
+              <Link to={"/EditServiceEmployee/" + employee.id} className="editar-employee">
                 Editar
               </Link>
               <input

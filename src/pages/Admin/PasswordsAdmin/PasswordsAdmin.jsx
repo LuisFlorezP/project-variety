@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import "./PasswordsAdmin.css";
 import { dataBase } from "../../../components/config/database.jsx";
