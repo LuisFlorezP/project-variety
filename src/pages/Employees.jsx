@@ -20,13 +20,13 @@ const Employees = () => {
         <section key={employee.id} className="container__card-general">
           <section className="container__card-interno">
             <img src={employee.imagen} />
-            <p> <span>Cargo: </span> {employee.cargo} </p>
-            <p> <span>Correo: </span> {employee.correo}</p>
-            <p> <span>Dirección: </span> {employee.direccion_residencia}</p>
-            <p> <span>Documento: </span> {employee.documento}</p>
             <p> <span>Nombre: </span> {employee.nombre}</p>
-            <p> <span>Cuenta bancaria: </span> {employee.numero_cuenta_bancaria}</p>
+            <p> <span>Documento: </span> {employee.documento}</p>
+            <p> <span>Correo: </span> {employee.correo}</p>
+            <p> <span>Cargo: </span> {employee.cargo} </p>
             <p> <span>Salario: </span> {employee.salario}</p>
+            <p> <span>Dirección: </span> {employee.direccion_residencia}</p>
+            <p> <span>Cuenta bancaria: </span> {employee.numero_cuenta_bancaria}</p>
           </section>
         </section>
       ))}

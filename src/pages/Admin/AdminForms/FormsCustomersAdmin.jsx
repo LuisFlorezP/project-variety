@@ -46,7 +46,7 @@ const FormsCustomersAdmin = () => {
                     <label>Email:</label>
                     <input type={"text"} id={"correo"} placeholder={"Enter email..."} onChange={e => setCorreo(e.target.value)} /><br />
                     <label>Address:</label>
-                    <input type={"text"} id={"correo"} placeholder={"Enter the address of residence..."} onChange={e => setDireccion(e.target.value)} /><br />
+                    <input type={"text"} id={"direccion"} placeholder={"Enter the address of residence..."} onChange={e => setDireccion(e.target.value)} /><br />
                     <label>City:</label>
                     <input type={"text"} id={"ciudad"} placeholder={"Enter the city of residence..."} onChange={e => setCiudad(e.target.value)} /><br />
                     <label>Neighborhood:</label>
