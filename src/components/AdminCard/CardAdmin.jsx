@@ -7,7 +7,7 @@ const CardAdmin = ({ title, description, link }) => {
       <section className="card-content-Admin">
         <h2 className="card-title-Admin">{title}</h2>
         <p className="card-description-Admin">{description}</p>
-        <Link to={link} className="card-button-Admin">Ir a la página</Link>
+        <Link to={link} className="card-button-Admin">See more</Link>
       </section>
     </section>
   );

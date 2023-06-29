@@ -15,15 +15,22 @@ const Passwords = () => {
   }, []);
 
   return (
-    <section>
+    <section className="container__upper">
       {passwords.map((password) => (
-        <section key={password.id}>
-          <img src={password.imagen} />
-          <img src={password.imagen_aplicacion} />
-          <p>{password.nombre_aplicacion}</p>
-          <p>{password.password_usuario}</p>
-          <p>{password.usuario}</p>
-          <hr />
+        <section key={password.id} className="container__card-general">
+          <secion className="container__card-interno">
+            <img src={password.imagen} />
+            <img src={password.imagen_aplicacion} />
+            <p>
+              <span>Aplicación: </span> {password.nombre_aplicacion}
+            </p>
+            <p>
+              <span>Contraseña: </span> {password.password_usuario}
+            </p>
+            <p>
+              <span>Usuario: </span> {password.usuario}
+            </p>
+          </secion>
         </section>
       ))}
     </section>
