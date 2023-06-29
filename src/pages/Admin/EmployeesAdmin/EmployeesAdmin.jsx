@@ -42,6 +42,7 @@ const EmployeesAdmin = () => {
                 <p>{employee.cargo}</p>
                 <p>{employee.correo}</p>
                 <p>{employee.direccion}</p>
+                <p>{employee.ciudad}</p>
                 <p>{employee.documento}</p>
                 <p>{employee.numero_cuenta_bancaria}</p>
                 <p>{employee.salario}</p>

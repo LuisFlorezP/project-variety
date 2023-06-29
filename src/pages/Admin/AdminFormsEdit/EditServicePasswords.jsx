@@ -5,103 +5,68 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { dataBase } from "../../../components/config/database";
 
-const EditServiceEmployees = () => {
-    const [nombreEmployees, setNombreEmployees] = useState('');
-    const [documentoEmployees, setDocumentoEmployees] = useState('');
-    const [cargoEmployees, setCargoEmployees] = useState('');
-    const [correoEmployees, setCorreoEmployees] = useState('');
-    const [direccion_residenciaEmployees, setDireccion_residenciaEmployees] = useState('');
-    const [numero_cuenta_bancariaEmployees, setNumero_cuenta_bancariaEmployees] = useState('');
-    const [salarioEmployees, setSalarioEmployees] = useState('');
+const EditServicePassword = () => {
+  const [usuario, setUsuario] = useState('');
+  const [password_usuario, setPassword_usuario] = useState('');
+  const [nombre_aplicacion, setNombre_aplicacion] = useState('');
     const returnListado = useNavigate();
     const { id } = useParams();
 
   const editServiceEmployees = async () => {
-    const employeesCollection = doc(dataBase,"empleado", id);
-    const employee = {
-      nombreEmployees,
-      documentoEmployees,  
-      cargoEmployees,
-      correoEmployees,
-      direccion_residenciaEmployees,
-      numero_cuenta_bancariaEmployees,
-      salarioEmployees 
+    const passwordCollection = doc(dataBase,"password", id);
+    const password = {
+      usuario,
+      password_usuario,
+      nombre_aplicacion,
+ 
     };
-    await updateDoc(employeesCollection, employee);
-    returnListado("/employeeadmin");
+    await updateDoc(passwordCollection, password);
+    returnListado("/passwordsadmin");
   };
   
-  const servicioActualizadoEmployees = async (id) => {
-    const servicioEditEmployees = await getDoc(doc(dataBase,"empleado", id));
+  const servicioActualizadoPassword = async (id) => {
+    const servicioEditEmployees = await getDoc(doc(dataBase,"password", id));
     
-    setNombreEmployees(servicioEditEmployees.data().nombreEmployees);
-    setDocumentoEmployees(servicioEditEmployees.data().documentoEmployees);
-    setCargoEmployees(servicioEditEmployees.data().cargoEmployees);
-    setCorreoEmployees(servicioEditEmployees.data().correoEmployees);
-    setDireccion_residenciaEmployees(servicioEditEmployees.data().direccion_residenciaEmployees);
-    setNumero_cuenta_bancariaEmployees(servicioEditEmployees.data().numero_cuenta_bancariaEmployees);
-    setSalarioEmployees(servicioEditEmployees.data().salarioEmployees);
+    setUsuario(servicioEditEmployees.data().usuario);
+    setPassword_usuario(servicioEditEmployees.data().password_usuario);
+    setNombre_aplicacion(servicioEditEmployees.data().nombre_aplicacion,
+    );
   };
   useEffect(() => {
-    servicioActualizadoEmployees(id);
+    servicioActualizadoPassword(id);
   }, []);
 
   return (
     <section>
-        <NavbarAdmin form={"/formemployeesadmin"}/>
+        <NavbarAdmin form={"/formpasswordsadmin"}/>
       <form>
         <input
           className="inputNombre"
-          value={nombreEmployees}
-          onChange={(e) => setNombreEmployees(e.target.value)}
-          placeholder={"Nombre Employees"}
+          value={usuario}
+          onChange={(e) => setUsuario(e.target.value)}
+          placeholder={"Nombre password"}
           type={"text"}
         />
         <input
-          value={documentoEmployees}
-          onChange={(e) => setDocumentoEmployees(e.target.value)}
-          placeholder={"Documento Employees"}
+          value={password_usuario}
+          onChange={(e) => setPassword_usuario(e.target.value)}
+          placeholder={"Documento password"}
           type={"text"}
         />
         <input
-          value={cargoEmployees}
-          onChange={(e) => setCargoEmployees(e.target.value)}
-          placeholder={"Post Employees"}
+          value={nombre_aplicacion}
+          onChange={(e) => setNombre_aplicacion(e.target.value)}
+          placeholder={"Post password"}
           type={"text"}
         />
-        <input
-          value={correoEmployees}
-          onChange={(e) => setCorreoEmployees(e.target.value)}
-          placeholder={"Mail Employees"}
-          type={"text"}
-        />
-        <input
-          value={direccion_residenciaEmployees}
-          onChange={(e) => setDireccion_residenciaEmployees(e.target.value)}
-          placeholder={"Address Employees"}
-          type={"text"}
-        />
-        <input
-          value={numero_cuenta_bancariaEmployees}
-          onChange={(e) => setNumero_cuenta_bancariaEmployees(e.target.value)}
-          placeholder={"City Employees"}
-          type={"text"}
-        />
-        <input
-          value={salarioEmployees }
-          onChange={(e) => setSalarioEmployees(e.target.value)}
-          placeholder={"Neighborhood Employees"}
-          type={"text"}
-        />
-
         <input
           onClick={editServiceEmployees}
           type={"button"}
-          value={"Edit Employees"}
+          value={"Edit password"}
         />
       </form>
     </section>
   );
 };
 
-export default EditServiceEmployees;
+export default EditServicePassword;

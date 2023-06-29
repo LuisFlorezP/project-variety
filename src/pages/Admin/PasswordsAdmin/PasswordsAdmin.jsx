@@ -44,7 +44,7 @@ const PasswordsAdmin = () => {
               </section>
             </section>
             <section className="buttons-passwords">
-              <Link to={""} className="editar-passwords">
+              <Link to={"/EditServicePassword/" + password.id} className="editar-passwords">
                 Editar
               </Link>
               <input
