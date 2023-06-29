@@ -33,7 +33,7 @@ const EditServiceProducts = () => {
     
     setNombre(servicioEdit.data().nombre);
     setDescripcion(servicioEdit.data().descripcion);
-    setCategoria(servicioEdit.data().cantidad);
+    setCategoria(servicioEdit.data().categoria);
     setValor(servicioEdit.data().valor);
     setCantidad(servicioEdit.data().cantidad);
 
