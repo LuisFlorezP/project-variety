@@ -31,7 +31,7 @@ const EditServiceCustomers = () => {
     returnListado("/customersadmin");
   };
   
-  const servicioActualizado = async (id) => {
+  const servicioActualizadoCustomer = async (id) => {
     const servicioEdit = await getDoc(doc(dataBase,"cliente", id));
     
     setNombre(servicioEdit.data().nombre);
@@ -43,7 +43,7 @@ const EditServiceCustomers = () => {
     setBarrio(servicioEdit.data().barrio);
   };
   useEffect(() => {
-    servicioActualizado(id);
+    servicioActualizadoCustomer(id);
   }, []);
 
   return (

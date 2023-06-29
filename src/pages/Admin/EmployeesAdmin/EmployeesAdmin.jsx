@@ -49,7 +49,7 @@ const EmployeesAdmin = () => {
               </section>
             </section>
             <section className="buttons-employee">
-              <Link to={""} className="editar-employee">
+              <Link to={"/EditServiceEmployee/" + employee.id} className="editar-employee">
                 Editar
               </Link>
               <input

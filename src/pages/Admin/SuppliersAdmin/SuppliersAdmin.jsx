@@ -46,7 +46,7 @@ const SuppliersAdmin = () => {
               </section>
             </section>
             <section className="buttons-suppliers">
-              <Link to={""} className="editar-suppliers">
+              <Link to={"/EditServiceSupplier/" + supplier.id} className="editar-suppliers">
                 Editar
               </Link>
               <input

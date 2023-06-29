@@ -1,4 +1,4 @@
-import { dataBase } from "../components/config/database";
+  import { dataBase } from "../components/config/database";
 import { collection, getDocs } from "@firebase/firestore";
 import { useEffect, useState } from "react";
 

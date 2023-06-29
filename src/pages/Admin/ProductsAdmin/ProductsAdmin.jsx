@@ -44,7 +44,7 @@ const ProductsAdmin = () => {
               </section>
             </section>
             <section className="buttons-products">
-              <Link to={""} className="editar-products">
+              <Link to={"/EditServiceProduct/" + product.id} className="editar-products">
                 Editar
               </Link>
               <input

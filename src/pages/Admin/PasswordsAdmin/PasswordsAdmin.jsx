@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import "./PasswordsAdmin.css";
 import { dataBase } from "../../../components/config/database.jsx";
@@ -43,7 +44,7 @@ const PasswordsAdmin = () => {
               </section>
             </section>
             <section className="buttons-passwords">
-              <Link to={""} className="editar-passwords">
+              <Link to={"/EditServicePassword/" + password.id} className="editar-passwords">
                 Editar
               </Link>
               <input
