@@ -1,5 +1,7 @@
+import "./Navbars.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg"
+import { RiArrowLeftCircleLine, RiAddFill } from "react-icons/ri";
 
 
 // eslint-disable-next-line react/prop-types
@@ -11,10 +13,10 @@ const NavbarAdmin = ({form}) => {
         </Link>
         <section>
         <Link to={"/adminoptions"}>
-          <button className="navbar__button">volver</button>
+          <RiArrowLeftCircleLine id="icon" className="icon-1" />
         </Link>
         <Link to={form}>
-          <button className="navbar__button">crear</button>
+        <RiAddFill id="icon" className="icon-1" />
         </Link>
         </section>
       </nav>

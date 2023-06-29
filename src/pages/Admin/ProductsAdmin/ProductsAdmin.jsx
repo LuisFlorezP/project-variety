@@ -1,6 +1,6 @@
 import "./ProductsAdmin.css";
 import { Link } from "react-router-dom";
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import NavbarAdmin from "../../../components/Navbar/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
@@ -44,7 +44,7 @@ const ProductsAdmin = () => {
               </section>
             </section>
             <section className="buttons-products">
-              <Link to={""} className="editar-products">
+              <Link to={"/EditServiceProduct/" + product.id} className="editar-products">
                 Editar
               </Link>
               <input

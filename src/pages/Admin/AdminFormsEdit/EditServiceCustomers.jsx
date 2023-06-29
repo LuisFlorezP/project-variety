@@ -1,4 +1,4 @@
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import NavbarAdminForm from "../../../components/Navbar/NavbarAdminForm";
 import { updateDoc, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -31,7 +31,7 @@ const EditServiceCustomers = () => {
     returnListado("/customersadmin");
   };
   
-  const servicioActualizado = async (id) => {
+  const servicioActualizadoCustomer = async (id) => {
     const servicioEdit = await getDoc(doc(dataBase,"cliente", id));
     
     setNombre(servicioEdit.data().nombre);
@@ -43,12 +43,12 @@ const EditServiceCustomers = () => {
     setBarrio(servicioEdit.data().barrio);
   };
   useEffect(() => {
-    servicioActualizado(id);
+    servicioActualizadoCustomer(id);
   }, []);
 
   return (
     <section>
-        <NavbarAdmin form={"/formcustomersadmin"}/>
+        <NavbarAdminForm comeback={"/customersadmin"}/>
       <form>
         <input
           className="inputNombre"

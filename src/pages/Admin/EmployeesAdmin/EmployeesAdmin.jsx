@@ -1,6 +1,6 @@
 import "./EmployeesAdmin.css";
 import { Link } from "react-router-dom";
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import NavbarAdmin from "../../../components/Navbar/NavbarAdmin";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
@@ -49,7 +49,7 @@ const EmployeesAdmin = () => {
               </section>
             </section>
             <section className="buttons-employee">
-              <Link to={""} className="editar-employee">
+              <Link to={"/EditServiceEmployee/" + employee.id} className="editar-employee">
                 Editar
               </Link>
               <input
