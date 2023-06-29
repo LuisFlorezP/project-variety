@@ -4,7 +4,7 @@ import "./PasswordsAdmin.css";
 import { dataBase } from "../../../components/config/database.jsx";
 import { collection, getDocs, doc, deleteDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
-import NavbarAdmin from "../../../components/NavbarAdmin/NavbarAdmin";
+import NavbarAdmin from "../../../components/Navbar/NavbarAdmin";
 
 const PasswordsAdmin = () => {
   const [passwords, setPasswords] = useState([]);

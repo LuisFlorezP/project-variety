@@ -7,10 +7,6 @@
 
 }
 
-.navbar__logo {
-
-}
-
 .navbar__links {
   font-size: 18px;
   font-weight: 300;
@@ -29,8 +25,6 @@
 
 }
 
-
-
 .navbar__button {
   width: 155px;
   height: 50.582px;
@@ -48,3 +42,15 @@
    
 }
 
+.icon-1 {
+  font-size: 65px;
+  margin-left: 50px;
+}
+
+a {
+  text-decoration: none;
+}
+
+#icon:active {
+  color: #8176af;
+}
