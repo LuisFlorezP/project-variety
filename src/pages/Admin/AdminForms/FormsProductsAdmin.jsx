@@ -29,26 +29,27 @@ const FormsProductsAdmin = () => {
     };
 
     return (
-        <>
-            <NavbarAdminForm comeback={"/productsadmin"} />
-            <section>
-                <form action="">
-                    <label>Name:</label>
-                    <input type={"text"} id={"nombre"} placeholder={"Enter product name..."} onChange={e => setNombre(e.target.value)} /><br />
-                    <label>Description:</label>
-                    <input type={"text"} id={"descripcion"} placeholder={"Enter product description..."} onChange={e => setDescripcion(e.target.value)} /><br />
-                    <label>Category:</label>
-                    <input type={"text"} id={"categoria"} placeholder={"Enter category..."} onChange={e => setCategoria(e.target.value)} /><br />
-                    <label>Price:</label>
-                    <input type={"number"} id={"valor"} placeholder={"Enter product price..."} onChange={e => setValor(e.target.value)} /><br />
-                    <label>Amount:</label>
-                    <input type={"number"} id={"cantidad"} placeholder={"Enter amount..."} onChange={e => setCantidad(e.target.value)} /><br />
-                    <label>Product image:</label>
-                    <input type={"file"} id={"imagen"} onChange={e => setFile(e.target.files[0])} /><br />
-                    <input type={"button"} value={"Submit"} onClick={saveProduct} />
-                </form>
-            </section> 
-        </>
+<>
+  <NavbarAdminForm comeback={"/productsadmin"} />
+  <section className="section-container">
+    <form className="form-container" action="">
+      <label className="form-label">Name:</label>
+      <input className="form-input" type="text" id="nombre" placeholder="Enter product name..." onChange={e => setNombre(e.target.value)} /><br />
+      <label className="form-label">Description:</label>
+      <input className="form-input" type="text" id="descripcion" placeholder="Enter product description..." onChange={e => setDescripcion(e.target.value)} /><br />
+      <label className="form-label">Category:</label>
+      <input className="form-input" type="text" id="categoria" placeholder="Enter category..." onChange={e => setCategoria(e.target.value)} /><br />
+      <label className="form-label">Price:</label>
+      <input className="form-input" type="number" id="valor" placeholder="Enter product price..." onChange={e => setValor(e.target.value)} /><br />
+      <label className="form-label">Amount:</label>
+      <input className="form-input" type="number" id="cantidad" placeholder="Enter amount..." onChange={e => setCantidad(e.target.value)} /><br />
+      <label className="form-label">Product image:</label>
+      <input className="form-input" type="file" id="imagen" onChange={e => setFile(e.target.files[0])} /><br />
+      <input className="form-submit" type="button" value="Submit" onClick={saveProduct} />
+    </form>
+  </section>
+</>
+
     );
 };
 

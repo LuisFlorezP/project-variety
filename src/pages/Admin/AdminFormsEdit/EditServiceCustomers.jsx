@@ -47,60 +47,75 @@ const EditServiceCustomers = () => {
   }, []);
 
   return (
-    <section>
-        <NavbarAdminForm comeback={"/customersadmin"}/>
-      <form>
-        <input
-          className="inputNombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-          placeholder={"Nombre Customers"}
-          type={"text"}
-        />
-        <input
-          value={documento}
-          onChange={(e) => setDocumento(e.target.value)}
-          placeholder={"Documento Customers"}
-          type={"text"}
-        />
-        <input
-          value={telefono}
-          onChange={(e) => setTelefono(e.target.value)}
-          placeholder={"Phone Customers"}
-          type={"text"}
-        />
-        <input
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-          placeholder={"Mail Customers"}
-          type={"text"}
-        />
-        <input
-          value={direccion}
-          onChange={(e) => setDireccion(e.target.value)}
-          placeholder={"Address Customers"}
-          type={"text"}
-        />
-        <input
-          value={ciudad}
-          onChange={(e) => setCiudad(e.target.value)}
-          placeholder={"City Customers"}
-          type={"text"}
-        />
-        <input
-          value={barrio}
-          onChange={(e) => setBarrio(e.target.value)}
-          placeholder={"Neighborhood Customers"}
-          type={"text"}
-        />
+<section className="section-container">
+  <NavbarAdminForm comeback={"/customersadmin"}/>
+  <form className="form-container">
+    <span>name</span>
+    <input
+      className="inputNombre form-input"
+      value={nombre}
+      onChange={(e) => setNombre(e.target.value)}
+      placeholder={"Nombre Customers"}
+      type={"text"}
+    />
+    <span>Document</span>
+    <input
+      className="form-input"
+      value={documento}
+      onChange={(e) => setDocumento(e.target.value)}
+      placeholder={"Documento Customers"}
+      type={"text"}
+    />
+    <span>Phone</span>
+    <input
+      className="form-input"
+      value={telefono}
+      onChange={(e) => setTelefono(e.target.value)}
+      placeholder={"Phone Customers"}
+      type={"text"}
+    />
+    <span>Mail</span>
+    <input
+      className="form-input"
+      value={correo}
+      onChange={(e) => setCorreo(e.target.value)}
+      placeholder={"Mail Customers"}
+      type={"text"}
+    />
+    <span>Address</span>
+    <input
+      className="form-input"
+      value={direccion}
+      onChange={(e) => setDireccion(e.target.value)}
+      placeholder={"Address Customers"}
+      type={"text"}
+    />
+    <span>City</span>
+    <input
+      className="form-input"
+      value={ciudad}
+      onChange={(e) => setCiudad(e.target.value)}
+      placeholder={"City Customers"}
+      type={"text"}
+    />
+    <span>Neighborhood</span>
+    <input
+      className="form-input"
+      value={barrio}
+      onChange={(e) => setBarrio(e.target.value)}
+      placeholder={"Neighborhood Customers"}
+      type={"text"}
+    />
 
-        <input
-          onClick={editService}
-          type={"button"}
-          value={"Edit Customers"}
-        />
-      </form>
-    </section>
+    <input
+      onClick={editService}
+      className="form-submit"
+      type={"button"}
+      value={"Edit Customers"}
+    />
+  </form>
+</section>
+
   );
 };
 

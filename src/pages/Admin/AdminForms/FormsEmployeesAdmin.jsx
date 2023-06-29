@@ -34,30 +34,31 @@ const FormsEmployeesAdmin = () => {
     };
 
     return (
-        <>
-            <NavbarAdminForm comeback={"/employeesadmin"} />
-            <section>
-                <form action="">
-                    <label>Name:</label>
-                    <input type={"text"} id={"nombre"} placeholder={"Enter employee name..."} onChange={e => setNombre(e.target.value)} /><br />
-                    <label>Document:</label>
-                    <input type={"text"} id={"documento"} placeholder={"Enter identity document number..."} onChange={e => setDocumento(e.target.value)} /><br />
-                    <label>Email:</label>
-                    <input type={"text"} id={"correo"} placeholder={"Enter email..."} onChange={e => setCorreo(e.target.value)} /><br />
-                    <label>Title:</label>
-                    <input type={"text"} id={"cargo"} placeholder={"Enter employee title..."} onChange={e => setCargo(e.target.value)} /><br />
-                    <label>Salary:</label>
-                    <input type="number" id={"salario"} placeholder={"Enter salary..."} onChange={e => setSalario(e.target.value)} /><br />
-                    <label>Address:</label>
-                    <input type={"text"} id={"direccion"} placeholder={"Enter the address of residence..."} onChange={e => setDireccion(e.target.value)} /><br />
-                    <label>Bank account number:</label>
-                    <input type={"text"} id={"numeroCuentaBancaria"} placeholder={"Enter the bank account number..."} onChange={e => setNumero_cuenta_bancaria(e.target.value)} /><br />
-                    <label>Employee image:</label>
-                    <input type={"file"} id={"imagen"} onChange={e => setFile(e.target.files[0])} /><br />
-                    <input type={"button"} value={"Submit"} onClick={saveEmployee} />
-                </form>
-            </section>
-        </>
+<>
+    <NavbarAdminForm comeback={"/employeesadmin"} />
+    <section className="section-container">
+        <form className="form-container" action="">
+            <label className="form-label">Name:</label>
+            <input className="form-input" type={"text"} id={"nombre"} placeholder={"Enter employee name..."} onChange={e => setNombre(e.target.value)} /><br />
+            <label className="form-label">Document:</label>
+            <input className="form-input" type={"text"} id={"documento"} placeholder={"Enter identity document number..."} onChange={e => setDocumento(e.target.value)} /><br />
+            <label className="form-label">Email:</label>
+            <input className="form-input" type={"text"} id={"correo"} placeholder={"Enter email..."} onChange={e => setCorreo(e.target.value)} /><br />
+            <label className="form-label">Title:</label>
+            <input className="form-input" type={"text"} id={"cargo"} placeholder={"Enter employee title..."} onChange={e => setCargo(e.target.value)} /><br />
+            <label className="form-label">Salary:</label>
+            <input className="form-input" type="number" id={"salario"} placeholder={"Enter salary..."} onChange={e => setSalario(e.target.value)} /><br />
+            <label className="form-label">Address:</label>
+            <input className="form-input" type={"text"} id={"direccion"} placeholder={"Enter the address of residence..."} onChange={e => setDireccion(e.target.value)} /><br />
+            <label className="form-label">Bank account number:</label>
+            <input className="form-input" type={"text"} id={"numeroCuentaBancaria"} placeholder={"Enter the bank account number..."} onChange={e => setNumero_cuenta_bancaria(e.target.value)} /><br />
+            <label className="form-label">Employee image:</label>
+            <input className="form-input" type={"file"} id={"imagen"} onChange={e => setFile(e.target.files[0])} /><br />
+            <input className="form-submit" type={"button"} value={"Submit"} onClick={saveEmployee} />
+        </form>
+    </section>
+</>
+
     );
 };
 

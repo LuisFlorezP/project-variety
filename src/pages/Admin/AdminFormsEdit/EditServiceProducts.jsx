@@ -43,41 +43,51 @@ const EditServiceProducts = () => {
   }, []);
 
   return (
-    <section>
+    <section className="section-container">
         <NavbarAdminForm comeback={"/productsadmin"} />
-      <form>
+      <form className="form-container">
+        <span>Name</span>
         <input
-          className="inputNombre"
+          className="inputNombre form-input"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
           placeholder={"Nombre"}
           type={"text"}
         />
+        <span>Descripcion Products</span>
         <input
+          className="form-input"
           value={descripcion}
           onChange={(e) => setDescripcion(e.target.value)}
           placeholder={"Descripcion Products"}
           type={"text"}
         />
+        <span>Post Products</span>
         <input
+          className="form-input"
           value={categoria}
           onChange={(e) => setCategoria(e.target.value)}
           placeholder={"Post Products "}
           type={"text"}
         />
+        <span>Mail Products</span>
         <input
+          className="form-input"
           value={valor}
           onChange={(e) => setValor(e.target.value)}
           placeholder={"Mail Products"}
           type={"text"}
         />
+        <span>Address Products</span>
         <input
+          className="form-input"
           value={cantidad}
           onChange={(e) => setCantidad(e.target.value)}
           placeholder={"Address Products "}
           type={"text"}
         />
         <input
+          className="form-submit"
           onClick={editService}
           type={"button"}
           value={"Edit "}

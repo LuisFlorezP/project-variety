@@ -45,47 +45,59 @@ const EditServiceSupplier = () => {
   }, []);
 
   return (
-    <section>
+    <section className="section-container">
         <NavbarAdminForm comeback={"/suppliersadmin"} />
-      <form>
+      <form className="form-container">
+        <span>Name mananger</span>
         <input
-          className="inputNombre"
+          className="inputNombre form-input"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
           placeholder={"Nombre"}
           type={"text"}
         />
+        <span>Descrpcion suppliers</span>
         <input
+          className="form-input"
           value={nit}
           onChange={(e) => setNit(e.target.value)}
           placeholder={"Descripcion Products"}
           type={"text"}
         />
+        <span>Address Suppliers</span>
         <input
+          className="form-input"
           value={direccion}
           onChange={(e) => setDireccion(e.target.value)}
-          placeholder={"Post Products "}
+          placeholder={"Address Suppliers"}
           type={"text"}
         />
+        <span>City Suppliers"</span>
         <input
+          className="form-input"
           value={ciudad}
           onChange={(e) => setCiudad(e.target.value)}
-          placeholder={"Mail Products"}
+          placeholder={"City Suppliers"}
           type={"text"}
         />
+        <span>Name manager</span>
         <input
+          className="form-input"
           value={nombre_gerente}
           onChange={(e) => setNombre_gerente(e.target.value)}
-          placeholder={"Address Products "}
+          placeholder={""}
           type={"text"}
         />
+        <span>phone mananger</span>
         <input
+          className="form-input"
           value={telefono_gerente}
           onChange={(e) => telefono_gerente(e.target.value)}
           placeholder={"Address Products "}
           type={"text"}
         />
         <input
+          className="form-submit"
           onClick={editService}
           type={"button"}
           value={"Editar"}

@@ -28,24 +28,25 @@ const FormsPasswordsAdmin = () => {
   };
   
   return (
-    <>
-      <NavbarAdminForm comeback={"/passwordsadmin"} />
-      <section>
-        <form action="">
-          <label>User:</label>
-          <input type={"text"} id={"usuario"} placeholder={"Enter the user..."} onChange={e => setUsuario(e.target.value)} /><br />
-          <label>Password:</label>
-          <input type={"text"} id={"password"} placeholder={"Enter user password..."} onChange={e => setPassword_usuario(e.target.value)} /><br />
-          <label>Name of the application:</label>
-          <input type={"text"} id={"nombreAplicacion"} placeholder={"Enter the name of the application..."} onChange={e => setNombre_aplicacion(e.target.value)} /><br />
-          <label>Password image:</label>
-          <input type={"file"} id={"imagenPassword"}   onChange={e => setFileOne(e.target.files[0])} /><br />
-          <label>Application image:</label>
-          <input type={"file"} id={"imagenAplicacion"} onChange={e => setFileTwo(e.target.files[0])} /><br />
-          <input type={"button"} value={"Submit"} onClick={savePassword} />
-        </form>      
-      </section>
-    </>
+<>
+  <NavbarAdminForm comeback={"/passwordsadmin"} />
+  <section className="section-container">
+    <form className="form-container" action="">
+      <label className="form-label">User:</label>
+      <input className="form-input" type="text" id="usuario" placeholder="Enter the user..." onChange={e => setUsuario(e.target.value)} /><br />
+      <label className="form-label">Password:</label>
+      <input className="form-input" type="text" id="password" placeholder="Enter user password..." onChange={e => setPassword_usuario(e.target.value)} /><br />
+      <label className="form-label">Name of the application:</label>
+      <input className="form-input" type="text" id="nombreAplicacion" placeholder="Enter the name of the application..." onChange={e => setNombre_aplicacion(e.target.value)} /><br />
+      <label className="form-label">Password image:</label>
+      <input className="form-input" type="file" id="imagenPassword" onChange={e => setFileOne(e.target.files[0])} /><br />
+      <label className="form-label">Application image:</label>
+      <input className="form-input" type="file" id="imagenAplicacion" onChange={e => setFileTwo(e.target.files[0])} /><br />
+      <input className="form-submit" type="button" value="Submit" onClick={savePassword} />
+    </form>
+  </section>
+</>
+
 );  
 };
 
