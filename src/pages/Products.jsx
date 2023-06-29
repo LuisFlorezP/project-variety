@@ -15,17 +15,33 @@ const Products = () => {
   }, []);
 
   return (
-    <section>
-      {products.map((product) => (
-        <section key={product.id}>
-          <h1>{product.cantidad}</h1>
-          <p>{product.categoria}</p>
-          <p>{product.descripcion}</p>
-          <p>{product.nombre}</p>
-          <p>{product.valor}</p>
-          <img src={product.imagen}/>
-        </section>
-      ))}
+    <section className="container-table-general">
+      <table className="container-table">
+        <thead>
+            <tr>
+              <th className="text-th">Name</th>
+              <th className="text-th">Description</th>
+              <th className="text-th">Category</th>
+              <th className="text-th">Price</th>
+              <th className="text-th">Amount</th>
+              <th className="text-th">Product</th>
+            </tr>
+        </thead>
+        <tbody>
+          {products.map((product) => (
+          <tr className="row-table" key={product.id}>
+            <td>{product.nombre}</td>
+            <td>{product.descripcion}</td>
+            <td>{product.categoria}</td>
+            <td>{product.valor}</td>
+            <td>{product.cantidad}</td>
+            <td id="td-img-table">
+              <img id="img-table" src={product.imagen}/>
+            </td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
     </section>
   );
 };

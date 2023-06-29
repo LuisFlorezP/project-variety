@@ -10,29 +10,26 @@ const Employees = () => {
     setEmployees(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
-  useEffect(()=> {
-    readEmployees()
-
-  },[])
+  useEffect(() => {
+    readEmployees();
+  }, []);
 
   return (
-    <section>
-      {
-          employees.map((employee) => (
-            <section key={employee.id}>
-              <h1>{employee.cargo}</h1>
-              <p>{employee.correo}</p>
-              <p>{employee.direccion_residencia}</p>
-              <p>{employee.documento}</p>
-              <p>{employee.nombre}</p>
-              <p>{employee.numero_cuenta_bancaria}</p>
-              <p>{employee.salario}</p>
-              <img src={employee.imagen}/>
-              <hr />
-            </section>
-          ))
-        }
-      
+    <section className="container__upper">
+      {employees.map((employee) => (
+        <section key={employee.id} className="container__card-general">
+          <section className="container__card-interno">
+            <img src={employee.imagen} />
+            <p> <span>Name: </span> {employee.nombre}</p>
+            <p> <span>Document: </span> {employee.documento}</p>
+            <p> <span>Email: </span> {employee.correo}</p>
+            <p> <span>Title: </span> {employee.cargo} </p>
+            <p> <span>Salary: </span> {employee.salario}</p>
+            <p> <span>Address: </span> {employee.direccion_residencia}</p>
+            <p> <span>Bank account number: </span> {employee.numero_cuenta_bancaria}</p>
+          </section>
+        </section>
+      ))}
     </section>
   );
 };

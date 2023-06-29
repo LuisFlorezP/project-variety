@@ -15,19 +15,39 @@ const Suppliers = () => {
   }, []);
 
   return (
-    <section>
-      {suppliers.map((supplier) => (
-        <section key={supplier.id}>
-          <p>{supplier.ciudad}</p>
-          <p>{supplier.direccion}</p>
-          <p>{supplier.nit}</p>
-          <p>{supplier.nombre}</p>
-          <p>{supplier.nombre_gerente}</p>
-          <p>{supplier.telefono_gerente}</p>
-          <img src={supplier.imagen_gerente} />
-          <img src={supplier.logo_empresa} />
-        </section>
-      ))}
+    <section className="container-table-general">
+      <table className="container-table">
+        <thead>
+            <tr>
+              <th className="text-th">Name</th>
+              <th className="text-th">Nit</th>
+              <th className="text-th">Address</th>
+              <th className="text-th">City</th>
+              <th className="text-th">Manager name</th>
+              <th className="text-th">Manager phone</th>
+              <th className="text-th">Company logo</th>
+              <th className="text-th">Manager</th>
+            </tr>
+        </thead>
+        <tbody>
+          {suppliers.map((supplier) => (
+          <tr className="row-table" key={supplier.id}>
+            <td>{supplier.nombre}</td>
+            <td>{supplier.nit}</td>
+            <td>{supplier.direccion}</td>
+            <td>{supplier.ciudad}</td>
+            <td>{supplier.nombre_gerente}</td>
+            <td>{supplier.telefono_gerente}</td>
+            <td id="td-img-table">
+              <img id="img-table" src={supplier.logo_empresa}/>
+            </td>
+            <td id="td-img-table">
+              <img id="img-table" src={supplier.imagen_gerente}/>
+            </td>
+          </tr>
+        ))}
+        </tbody>
+      </table>
     </section>
   );
 };
