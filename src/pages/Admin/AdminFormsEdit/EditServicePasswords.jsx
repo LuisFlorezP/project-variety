@@ -37,29 +37,35 @@ const EditServicePassword = () => {
   }, []);
 
   return (
-    <section>
+    <section className="section-container">
         <NavbarAdminForm comeback={"/passwordsadmin"} />
-      <form>
+      <form className="form-container">
+        <span>Name password</span>
         <input
-          className="inputNombre"
+          className="inputNombre form-input"
           value={usuario}
           onChange={(e) => setUsuario(e.target.value)}
           placeholder={"Nombre password"}
           type={"text"}
         />
+        <span>Document Password</span>
         <input
+          className="form-input"
           value={password_usuario}
           onChange={(e) => setPassword_usuario(e.target.value)}
           placeholder={"Documento password"}
           type={"text"}
         />
+        <span>Post Password</span>
         <input
+          className="form-input"
           value={nombre_aplicacion}
           onChange={(e) => setNombre_aplicacion(e.target.value)}
           placeholder={"Post password"}
           type={"text"}
         />
         <input
+          className="form-submit"
           onClick={editServiceEmployees}
           type={"button"}
           value={"Edit password"}

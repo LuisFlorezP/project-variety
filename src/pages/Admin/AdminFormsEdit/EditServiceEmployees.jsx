@@ -49,52 +49,65 @@ const EditServiceEmployees = () => {
   return (
     <section>
         <NavbarAdminForm comeback={"/employeesadmin"} />
-      <form>
+      <form className="form-container">
+        <span>Name</span>
         <input
-          className="inputNombre"
+          className="inputNombre form-input"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
           placeholder={"Nombre Employees"}
           type={"text"}
         />
+        <span>Document</span>
         <input
+          className="form-input"
           value={documento}
           onChange={(e) => setDocumento(e.target.value)}
           placeholder={"Documento Employees"}
           type={"text"}
         />
+        <span>Tittle</span>
         <input
+          className="form-input"
           value={cargo}
           onChange={(e) => setCargo(e.target.value)}
           placeholder={"Post Employees"}
           type={"text"}
         />
+        <span>Mail</span>
         <input
+          className="form-input"
           value={correo}
           onChange={(e) => setCorreo(e.target.value)}
           placeholder={"Mail Employees"}
           type={"text"}
         />
+        <span>Residence Adress</span>
         <input
+         className="form-input"
           value={direccion_residencia}
           onChange={(e) => setDireccion_residencia(e.target.value)}
           placeholder={"Address Employees"}
           type={"text"}
         />
+        <span>Bank account</span>
         <input
+          className="form-input"
           value={numero_cuenta_bancaria}
           onChange={(e) => setNumero_cuenta_bancaria(e.target.value)}
           placeholder={" Employees"}
           type={"text"}
         />
+        <span>Salary</span>
         <input
+          className="form-input"
           value={salario}
           onChange={(e) => setSalario(e.target.value)}
           placeholder={"Neighborhood Employees"}
           type={"text"}
         />
-
         <input
+          className="form-submit"
           onClick={editService}
           type={"button"}
           value={"Edit Employees"}
