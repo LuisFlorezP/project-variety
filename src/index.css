@@ -52,7 +52,7 @@ body {
   color: #AEAEAE;
 }
 
-.containes_admin-dashboard {
+.container_admin-dashboard {
   padding: 160px 0px 20px;
   height: 300px;
   display: flex;
@@ -60,7 +60,7 @@ body {
   align-items: center;
 }
 
-.containes_admin-options {
+.container_admin-options {
   width: 70%;
   margin: 0px auto;
   padding-top: 50px;
