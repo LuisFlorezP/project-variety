@@ -12,7 +12,7 @@ const FormsEmployeesAdmin = () => {
     const [cargo, setCargo] = useState('');
     const [salario, setSalario] = useState(0);
     const [direccion, setDireccion] = useState('');
-    const [ciudad, setCiudad] = useState('');
+    const [numero_cuenta_bancaria, setNumero_cuenta_bancaria] = useState('');
     const [file, setFile] = useState(null);
     const readEmployees = useNavigate();
 
@@ -26,7 +26,7 @@ const FormsEmployeesAdmin = () => {
             cargo,
             salario,
             direccion,
-            ciudad,
+            numero_cuenta_bancaria,
             imagen
         };
         await addDoc(employeeCollection, employee);
@@ -51,7 +51,7 @@ const FormsEmployeesAdmin = () => {
                     <label>Address:</label>
                     <input type={"text"} id={"direccion"} placeholder={"Enter the address of residence..."} onChange={e => setDireccion(e.target.value)} /><br />
                     <label>Bank account number:</label>
-                    <input type={"text"} id={"ciudad"} placeholder={"Enter the bank account number..."} onChange={e => setCiudad(e.target.value)} /><br />
+                    <input type={"text"} id={"numeroCuentaBancaria"} placeholder={"Enter the bank account number..."} onChange={e => setNumero_cuenta_bancaria(e.target.value)} /><br />
                     <label>Employee image:</label>
                     <input type={"file"} id={"imagen"} onChange={e => setFile(e.target.files[0])} /><br />
                     <input type={"button"} value={"Submit"} onClick={saveEmployee} />
